@@ -1,0 +1,8 @@
+numpy
+click
+tqdm
+matplotlib
+tikzplotlib
+tensorflow
+keras
+scipy
