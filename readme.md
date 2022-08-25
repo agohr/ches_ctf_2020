@@ -12,6 +12,9 @@ To install the requirements, do the following:
 
 Now all requirements should be automatically set up.
 
+To install tensorflow using this command if you have issues: `python3 -m pip install --upgrade https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.12.0-py3-none-any.whl
+`.
+
 ## Running the experiments
 
 The main script in this repository is `test_main.py`. It can be used to run the attack described in our paper, to train the main neural network described in our paper, or to perform our synthetic data experiment on the scattershot encoding. We will describe below how the script is to be used in each case:
