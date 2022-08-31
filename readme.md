@@ -34,4 +34,8 @@ The `model_file_name` and the `trace_file_name` tell the script where to store t
 
 To replicate the experiment on using the scattershot encoding on a simple synthetic problem, run the main script as follows:
 
-`python test_main.py --mode scatter`
+`python test_main.py --mode scatter
+
+### Troubleshooting
+
+On Mac, installing the `tensorflow` dependency has been reported to be sometimes problematic. In this case, replacing `tensorflow` in `requirements.txt` with `tensorflow-macos` should fix the problem.
