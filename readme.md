@@ -6,7 +6,7 @@ To install the requirements, do the following:
 
 - Clone this repository to a suitable local directory.
 - Run `python -m venv <name_of_virtualenv>` to create a virtual environment under python 3.8.8 or later. We will in the sequel assume that `name_of_virtualenv` is `venv`.
-- Activate the virtual environment by running `source ./venv/bin/activate'
+- Activate the virtual environment by running `source ./venv/bin/activate`
 - Change into the directory where this repository has been cloned to.
 - Run `pip install -r requirements.txt`.
 
@@ -38,4 +38,4 @@ To replicate the experiment on using the scattershot encoding on a simple synthe
 
 ### Troubleshooting
 
-On Mac, installing the `tensorflow` dependency has been reported to be sometimes problematic. In this case, replacing `tensorflow` in `requirements.txt` with `tensorflow-macos` should fix the problem.
+On Mac, installing the `tensorflow` dependency has been reported to be sometimes problematic. In this case, manually installing `tensorflow-macos` should fix the problem.
