@@ -72,6 +72,8 @@ def main(target, data_folder, mode, key_file, num_samples, model_file, traces_fi
             else:
                 if save_plots.endswith('.tex'):
                     tikzplotlib.save(save_plots)
+                else:
+                    print('Unknown file extension. Please use .png or .tex')
         plt.show()
 
     else:
