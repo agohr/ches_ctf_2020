@@ -6,6 +6,8 @@ import click
 from additional_tests import scatter
 from matplotlib import pyplot as plt
 
+import tikzplotlib
+
 
 net_params = {}
 net_params['sw3'] = {'depth': 10, 'q1': 100, 'q2': 625, 'outputs': 100, 'D': 3, 'netfile': './models/model_hw_sbox_masks3.h5'}
@@ -36,7 +38,8 @@ def get_attack_stats(data_folder, target, key_file, num_samples):
 @click.option('--num-samples', default=20, help='Number of samples to use in attack')
 @click.option('--model-file', default='./models/model.h5', help='Model checkpoint file')
 @click.option('--traces-file', default='./all_traces.npy', help='File to collect all traces in')
-def main(target, data_folder, mode, key_file, num_samples, model_file, traces_file):
+@click.option('--save-plots', default=None, help='Save plots')
+def main(target, data_folder, mode, key_file, num_samples, model_file, traces_file, save_plots):
     if mode == 'attack':
         print('Running attack')	
         stats = get_attack_stats(data_folder, target, key_file, num_samples)
@@ -57,6 +60,12 @@ def main(target, data_folder, mode, key_file, num_samples, model_file, traces_fi
         ax[0].set_title('Validation loss Model 1')
         ax[1].plot(h2)
         ax[1].set_title('Validation loss Model 2')
+        if save_plots is not None:
+            if save_plots.endswith('.png'):
+                plt.savefig(save_plots)
+            else:
+                if save_plots.endswith('.tex'):
+                    tikzplotlib.save(save_plots)
         plt.show()
 
     else:
