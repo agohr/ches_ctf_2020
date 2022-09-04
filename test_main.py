@@ -58,8 +58,14 @@ def main(target, data_folder, mode, key_file, num_samples, model_file, traces_fi
         fig, ax = plt.subplots(1, 2)
         ax[0].plot(h1)
         ax[0].set_title('Validation loss Model 1')
+        # set x, y axis labels
+        ax[0].set_xlabel('Epochs')
+        ax[0].set_ylabel('Validation loss')
         ax[1].plot(h2)
         ax[1].set_title('Validation loss Model 2')
+        # set x, y axis labels
+        ax[1].set_xlabel('Epochs')
+        ax[1].set_ylabel('Validation loss')
         if save_plots is not None:
             if save_plots.endswith('.png'):
                 plt.savefig(save_plots)
