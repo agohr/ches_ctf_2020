@@ -1,0 +1,6 @@
+# Byte-compiled code
+__pycache__/
+
+# images
+*.png
+
