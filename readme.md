@@ -43,7 +43,7 @@ where `model_file` is the path to the model file you want to use. The model file
 
 #### Examples
 
-To illustrate these instructions, we will provide a fully specified example call. Suppose you want to run the sw3 challenge on fixed key datasets stored in `./data/sw3/fkey/` after downloading the relevant traces files from the open data repository; for concreteness, we may assume that `./data/sw3/fkey/` contains just one file, say `fkey_s23_K0_1000_0.npz`. You have further downloaded the corresponding secret key to `./data/sw3/secret_sw3_K0` and you want to test the attack using 30 samples in each attack run. Then you would run the following command:
+To illustrate these instructions, we will provide a fully specified example call. Suppose you want to run the sw3 challenge on fixed key datasets stored in `./data/sw3/fkey/` after downloading the relevant traces files from the open data repository; for concreteness, we may assume that `./data/sw3/fkey/` contains just one file, say `fkey_sw3_K0_1000_0.npz`. You have further downloaded the corresponding secret key to `./data/sw3/secret_sw3_K0` and you want to test the attack using 30 samples in each attack run. Then you would run the following command:
 
 `python test_main.py --target sw3 --data-folder ./data/sw3/fkey/ --mode attack --key-file ./data/sw3/secret_sw3_K0 --num_samples 30`
 
@@ -55,7 +55,6 @@ To obtain a key rank below 2<sup>32</sup>, you should use the following number o
 | sw4    | 105               |
 | sw6    | 3000              |
 | sw8    | 35000             |
-|--------|-------------------|
 
 In order to obtain different datasets in each attack run, the number of traces in the attack data folder should be higher than the number of samples specified in the command line. For example, if you want to run the attack on 30 samples, you should have at least 100 traces in the attack data folder.
 
